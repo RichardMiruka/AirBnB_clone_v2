@@ -338,6 +338,6 @@ This project was done by [SE. Richard Miruka](https://github.com/RichardMiruka).
 
 :iphone: WhtasApp [+25700129706](https://wa.me/254700129706)
 
-:email: Email [moses.soft.eng@gmail.com](mailto:richardmiruka96@gmail.com)
+:email: Email [richardmiruka96@gmail.com](mailto:richardmiruka96@gmail.com)
 
 :thumbsup: A lot of thanks to [ALX-Africa Software Engineering](https://www.alxafrica.com/) program for the project requirements.
