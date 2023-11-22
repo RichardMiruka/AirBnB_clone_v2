@@ -6,9 +6,16 @@ Requirements:
     - Routes use option strict_slashes=False in thier definitions
 
 Routes:
-    /           display 'hello HBNB'
-    /HBNB       display 'HBNB'
-    /c/<text>   display 'C <text>'
+    /
+        Display 'hello HBNB'
+    /HBNB
+        Display 'HBNB'
+    /c/<text>
+        Display 'C <text>'
+        Replacing _ with space in <text>
+    /python/(<text>)
+        Display 'Python <text>', <text> default value 'is cool'
+        Replacing _ with space in <text>
 """
 from flask import Flask
 
@@ -35,8 +42,19 @@ def show_HBNB():
 
 @app.route('/c/<text>', strict_slashes=False)
 def show_C(text):
-    """Display 'c <text>'"""
+    """Display 'c <text>'
+    Replacing _ with space in <text>
+    """
     return 'C {}'.format(text.replace('_', ' '))
+
+
+@app.route("/python", strict_slashes=False)
+@app.route('/python/<text>', strict_slashes=False)
+def show_Python(text='is cool'):
+    """Display 'Python <text>'
+    Replacing _ with space in <text>
+    """
+    return 'Python {}'.format(text.replace('_', ' '))
 
 # Set socket to run the app on
 if __name__ == "__main__":
